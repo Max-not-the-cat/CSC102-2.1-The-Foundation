@@ -1,4 +1,4 @@
-<!-- Max Montgomery -->
+<!-- Max Montgomery for CSC102 1/22/2026 -->
 <!-- The line below specifies that this is an HTML5 webpage -->
 <!DOCTYPE html>
 <!-- Ctrl + ? will generate a code comment in VS code for the type of code you are using -->
@@ -9,34 +9,64 @@
 <head>
     <!-- this means that pretty much any character from any language may appear in this page -->
     <meta charset="UTF-8">
-    <!-- this is the first step in having a mobile frindly design -->
+    <!-- this is the first step in having a mobile friendly design -->
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <!-- Title the page to "The Index" -->
+    <!-- title the page to "The Index" -->
     <!-- Short, Sweet, Descriptive -->
     <title>The Index</title>
-    <!-- Close Title block -->
+    <!-- Close title block -->
 </head>
 <!-- End of head -->
 <!-- All page content intended to be visible should be between either the head of body tags -->
 <!-- Start of body -->
 <body>
-<!-- header is a semantic HTML tag -->
-<!-- header - typically has logo and/or menu -->
+    <!-- header is a semantic HTML tag -->
+    <!-- header - typically has logo and/or menu -->
     <header>
         <!-- Text header containing "The Index" -->
         <h1>The Index</h1>
         <!-- Subtext header containing "Place of storage and references" in italics -->
         <h2><i>Place of storage and references</i></h2>
+        <h2>There are 4 pillars of programming</h2>
+        <h3>Variables</h3>
+        <h3>Decicion Logic (if/else)</h3>
+        <h3>Functions</h3>
+        <h3>Loops</h3>
     </header>
+
+    <!-- div is another example of a semantic tag -->
+    <div>
+
+    </div>
     <main>
         <!-- Start of paragraph -->
         <!-- Paragraph containing image source, id, title, alt, and dimentions -->
         <p>
-            <img id="memeImage" src="ZnDLvIA.jpg" width="750" height="750" title="Bunnies hiding from email" alt="Fearful bunnies" />
+            <!-- below image uses formatting for an image included within the file -->
+            <img id="memeImage" src="ZnDLvIA.jpg" width="750" height="750" title="Bunnies hiding in fear from the concept of E-Mail" alt="Image of fearful bunnies" />
+            <!-- below image uses formatting for linking a web source external to the file -->
+            <img id="memeImage" src="https://i.imgur.com/M3fzS7y.jpeg" width="750" height="750" title="Skeleton encouraging social awareness" alt="Image of a skeleton" />
         </p>
         <!-- End of paragraph -->
     </main>
+    <!-- The script tags they specify that we are now coding with JavaScript - a whole new set of rule apply in JavaScript -->
+    <script>
+        // This is a single-line comment in JavaScript
+        /* This is a multi-line comment in JavaScript */
+
+        // a variable stores a piece of information
+        // variables should have descriptive names
+        // use decriptive variable names such as firstName
+        // let is the best way to create a JavaScript variable
+        let firstName = "Max";
+        // var is another option for assigning a value to a variable
+        var lastName = "Montgomery";
+        if (firstName == "Max") { alert("Hello Max"); }
+        else { alert("Hello Stranger"); };
+      
+    </script>
     <!-- End of body -->
 </body>
+<!-- The closing HTML tag should be at the very end of the file -->
 <!-- End of HTML codeblock -->
 </html>
