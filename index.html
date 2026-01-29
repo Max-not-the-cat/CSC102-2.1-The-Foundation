@@ -31,10 +31,51 @@
         <!-- Subtext header containing "Place of storage and references" in italics -->
         <h2><i>Place of storage and references</i></h2>
         <h2>There are 4 pillars of programming</h2>
+
         <h3>Variables</h3>
-        <h3>Decicion Logic (if/else)</h3>
+    <!-- The script tags they specify that we are now coding with JavaScript - a whole new set of rule apply in JavaScript -->
+    <script>
+        // This is a single-line comment in JavaScript
+        /* This is a multi-line comment in JavaScript */
+
+        // a variable stores a piece of information
+        // variables should have descriptive names
+        // use decriptive variable names such as firstName
+        // let is the best way to create a JavaScript variable
+        let firstName = "Max";
+        // var is another option for assigning a value to a variable. var and let are basically equivalent for the purposes of this class - but use let cause it's better
+        var lastName = "Montgomery";
+        if (firstName == "Max") { console.log("Hello", lastName) }
+        else {  };
+      
+    </script> 
         <h3>Functions</h3>
+    <script>
+        // let's talk about functions - functions are way to organize chunks of code; functions also allow us to write code one time and reuse it as many times as needed
+        // when creating a function in javaScript - use the keyword function to let the interpereted know that you are creating a reusable chunk of code
+        // we create a descriptive name for what our function will do - most of the time our function names should include a verb; start function names with a letter, you can use numbers and _ 
+        // we have camelCase or snake_case for naming stayles - use whichever one you want, but stay consistant
+        // after the function name, use parenthesis () whether or not you are passing values into the funtion
+        // the function code must be places within curly braces {}
+        function addNumbers(){
+            // create 2 variables so we can add them together
+            let number1 = 5; // we are hard-coding the value of 5 here
+            let number2 = 8;
+
+            // create another variable to hold the sum
+            let sum = number1 + number2;
+            // to concantenate (add text together), you can use + or ,
+            console.log("The sum of your numbers is:", sum);
+        }
+        // this line of code calls the function so we can test it
+        addNumbers();
+    </script>
+        <h3>Decicion Logic (if/else)</h3>
+
+ 
+
         <h3>Loops</h3>
+
     </header>
 
     <!-- div is another example of a semantic tag -->
@@ -52,22 +93,7 @@
         </p>
         <!-- End of paragraph -->
     </main>
-    <!-- The script tags they specify that we are now coding with JavaScript - a whole new set of rule apply in JavaScript -->
-    <script>
-        // This is a single-line comment in JavaScript
-        /* This is a multi-line comment in JavaScript */
 
-        // a variable stores a piece of information
-        // variables should have descriptive names
-        // use decriptive variable names such as firstName
-        // let is the best way to create a JavaScript variable
-        let firstName = "Max";
-        // var is another option for assigning a value to a variable
-        var lastName = "Montgomery";
-        if (firstName == "Max") { console.log("Hello", lastName) }
-        else {  };
-      
-    </script>
     <!-- End of body -->
 </body>
 <!-- The closing HTML tag should be at the very end of the file -->
