@@ -108,48 +108,43 @@
          <button onclick="playDiceGame();">
 Roll the dice
          </button>
-         <div id="divMessage"></div>
+         <div id="divMessage">Waiting for the game to start</div>
          <div id="divRoll1"></div>
          <div id="divRoll2"></div>
          <div id="divSum"></div>
 <!-- TODO: move this JavaScript to a seperate .js file -->
          <script>
             // function will generate a random number between 1 and the maximum number requested
-        function getRandomInt(max){
-            return Math.floor(Math.random() * max + 1);
-        }
-        let resultMessage = "";
-        function playDiceGame(){
-            // variable to hold our first roll of the die
-            let roll1 = getRandomInt(6);
-            let roll2 = getRandomInt(6);
-            let sum = roll1 + roll2;
-            console.log(sum);
-            document.getElementById("divRoll1").innerText = "The First Die Rolls:" + roll1;
-            document.getElementById("divRoll2").innerText = "The Second Die Rolls:" + roll2;
-            document.getElementById("divSum").innerText = "Added Together:" + sum;
-            if (roll1 == roll2) {
-let resultMessage = "You Win"
-console.log(resultMessage);
-document.getElementById("divMessage").innerText = resultMessage;
+            function getRandomInt(maximumRoll){
+                return Math.floor(Math.random() * maximumRoll + 1);
             }
-            else if (roll1 + roll2 == 7) {
-let resultMessage = "You Lose"
-console.log(resultMessage);
-document.getElementById("divMessage").innerText = resultMessage;
-            }
-            else if (roll1 + roll2 == 11) {
-let resultMessage = "You Lose"
-console.log(resultMessage);
-document.getElementById("divMessage").innerText = resultMessage;
-            }
-            else {
-                let resultMessage = "Tie Game"
-                console.log(resultMessage);
-                document.getElementById("divMessage").innerText = resultMessage;
-            }
+            let resultMessage = "";
+            function playDiceGame(){
+                // variable to hold our first roll of the die
+                let roll1 = getRandomInt(6);
+                let roll2 = getRandomInt(6);
+                let sum = roll1 + roll2;
+                // console.log(sum);
+                document.getElementById("divRoll1").innerText = "The First Die Rolls:" + roll1;
+                document.getElementById("divRoll2").innerText = "The Second Die Rolls:" + roll2;
+                document.getElementById("divSum").innerText = "Added Together:" + sum;
+                if (roll1 == roll2) {
+                    let resultMessage = "You Win"
+                    //console.log(resultMessage);
+                    document.getElementById("divMessage").innerText = resultMessage;
+                }
+                else if (roll1 + roll2 == 7 || roll1 + roll2 == 11) {
+                    let resultMessage = "You Lose"
+                    //console.log(resultMessage);
+                    document.getElementById("divMessage").innerText = resultMessage;
+                }
+                else {
+                    let resultMessage = "Tie Game"
+                    // console.log(resultMessage);
+                    document.getElementById("divMessage").innerText = resultMessage;
+                }
           
-        }
+            }
          </script>
     </main>
 
