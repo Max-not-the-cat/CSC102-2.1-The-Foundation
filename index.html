@@ -62,9 +62,9 @@
             var number2 = 8;
 
             // create another variable to hold the sum
-            let sum = number1 + number2;
+            let sumAddNumber = number1 + number2;
             // to concantenate (add text together), you can use + or ,
-            console.log("The sum of your numbers is:", sum);
+            console.log("The sum of your numbers is:", sumAddNumber);
         }
         // this line of code calls the function so we can test it
         addNumbers();
@@ -108,7 +108,7 @@
          <button onclick="playDiceGame();">
 Roll the dice
          </button>
-         <div id="divMessage">Waiting for the game to start</div>
+         <div id="divMessage"></div>
          <div id="divRoll1"></div>
          <div id="divRoll2"></div>
          <div id="divSum"></div>
@@ -118,12 +118,37 @@ Roll the dice
         function getRandomInt(max){
             return Math.floor(Math.random() * max + 1);
         }
+        let resultMessage = "";
         function playDiceGame(){
             // variable to hold our first roll of the die
             let roll1 = getRandomInt(6);
             let roll2 = getRandomInt(6);
             let sum = roll1 + roll2;
             console.log(sum);
+            document.getElementById("divRoll1").innerText = "The First Die Rolls:" + roll1;
+            document.getElementById("divRoll2").innerText = "The Second Die Rolls:" + roll2;
+            document.getElementById("divSum").innerText = "Added Together:" + sum;
+            if (roll1 == roll2) {
+let resultMessage = "You Win"
+console.log(resultMessage);
+document.getElementById("divMessage").innerText = resultMessage;
+            }
+            else if (roll1 + roll2 == 7) {
+let resultMessage = "You Lose"
+console.log(resultMessage);
+document.getElementById("divMessage").innerText = resultMessage;
+            }
+            else if (roll1 + roll2 == 11) {
+let resultMessage = "You Lose"
+console.log(resultMessage);
+document.getElementById("divMessage").innerText = resultMessage;
+            }
+            else {
+                let resultMessage = "Tie Game"
+                console.log(resultMessage);
+                document.getElementById("divMessage").innerText = resultMessage;
+            }
+          
         }
          </script>
     </main>
