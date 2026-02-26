@@ -94,7 +94,7 @@
     </div>
     <main>
         <button id="btnStart" onclick="startImageMove();">Start Image Movement</button>
-        <button id="btnStop" onclick="stopImageMove();" disabled="true">Stop Image Movement</button>
+        <button id="btnStop" onclick="stopImageMove();" disabled>Stop Image Movement</button>
         <!-- Start of paragraph -->
         <!-- Paragraph containing image source, id, title, alt, and dimentions -->
         <p>
@@ -103,31 +103,6 @@
         </p>
         <!-- End of paragraph -->
          <script>
-            // create the function to move the image
-            function startImageMove(){
-                // we are creating a variable that is a shortcut or nickname for our HTML image element
-                let memeImage = document.getElementById("memeImage");
-                
-                // setInterval allows us to repeatedly run code
-                // function(){} is an anonymous function - a way to run a chunk of code 1 time as a function argument
-                setInterval(function(){
-                    let topCord = getRandomIntImg(1000);
-                    let leftCord = getRandomIntImg(1000);
-                
-                    memeImage.style.left = topCord + "px";
-                    memeImage.style.top = leftCord + "px";
-                }, 1000); // 1000ms = 1 second
-
-
-                // enable the stop button  == can click on stop button
-                document.getElementById("btnStop").disabled = false;
-                // disable the start button == cannot click on start button
-                document.getElementById("btnStart").disabled = true;
-            }
-
-            // build a function to get a random number
-          function getRandomIntImg(maximumPixels){return Math.floor(Math.random() * maximumPixels);}
-
          </script>
          <h2>
             Play my dice game

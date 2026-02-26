@@ -29,3 +29,37 @@
       
         }
         
+            // create a variable to track the current interval ID (returned from the setInterval function)
+            let intervalId = 0;
+            // create the function to move the image
+            function startImageMove(){
+                // we are creating a variable that is a shortcut or nickname for our HTML image element
+                let memeImage = document.getElementById("memeImage");
+                
+                // setInterval allows us to repeatedly run code
+                // function(){} is an anonymous function - a way to run a chunk of code 1 time as a function argument
+                intervalId = setInterval(function(){
+                    let topCord = getRandomInt(1000);
+                    let leftCord = getRandomInt(1000);
+                
+                    memeImage.style.left = topCord + "px";
+                    memeImage.style.top = leftCord + "px";
+                }, 1000); // 1000ms = 1 second
+
+
+                // enable the stop button  == can click on stop button
+                document.getElementById("btnStop").disabled = false;
+                // disable the start button == cannot click on start button
+                document.getElementById("btnStart").disabled = true;
+            }
+            // create the function that stops the image from moving
+            function stopImageMove(){
+                // call a built in javascript function that stops the setinterval from running
+                clearInterval(intervalId);
+
+                
+                // disable the stop button  == cannot click on stop button
+                 document.getElementById("btnStop").disabled = true;
+                // enable the start button == can click on start button
+                 document.getElementById("btnStart").disabled = false;
+            }
