@@ -117,7 +117,44 @@ Roll the dice
 <!-- link to the game logic -->
          <script src="script.js"></script>
     </main>
+<script>
+    // define the Animal class we build UML for
+class Animal{
+// constructor - allows us to quickly create a new object
+constructor(species, kingdom, genus, family, color, age){
+    // we set up our properties on the fly
+    this.species = species;
+    this.kingdom = kingdom;
+    this.genus = genus;
+    this.family = family;
+    this.color = color;
+    this.age = age;
+}
+setFamily(new_family){
+    this.family = new_family;
+}
 
+getFamily(){
+    return this.family;
+}
+
+eat(){
+    return "consumption has occured";
+}
+makeSound(){
+    return "Animals in this family make this sound";
+}
+
+}
+// create an Animal object to bring our class to life
+let cat = new Animal("Felidae", "Animalia", "Feline", "Cat", "black", 2);
+console.log(cat.eat());
+console.log(cat.makeSound());
+console.log(cat.getFamily());
+
+
+
+</script>
     <!-- End of body -->
 </body>
 <!-- The closing HTML tag should be at the very end of the file -->
