@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+                <nav>
+<a href="index.html">Index</a>
+<a href="Final_CSC102.html">Board</a>
+<a href="plants.html">Plants</a>
+<a href="Strings.html">Strings</a>
+<a href="Palindrome.html">Palindromes</a>
+        </nav>
+        <h1>Input Validation</h1>
+    </header>
+    <main>
+        <!-- this div is where we ill show messages to the user about their inputs -->
+        <div id="divMessage"></div>
+        <form>
+            <!-- add div tags around each label/input combo so that they are on the line together; labels and inputs are inline elements, div is block-->
+            <div>
+            <label for="txtFirstName">First Name</label>
+            <input type="text" id="txtFirstName">
+            </div>
+            <!-- This is the input for the last name -->
+            <div>
+            <label for="txtLastName">Last Name</label>
+            <input type="text" id="txtLastName">
+            </div>
+            <div>
+            <label for="txtZip">Zip Code</label>
+            <input type="text" id="txtZip">
+            </div>
+            <!-- use a button to validate the form, set the type to button so clicking doe NOT submit the form -->
+            <button type="button" onclick="validate();">Validate!</button>
+        </form>
+    </main>
+    <script src="script.js">
+    </script>
+</body>
+</html>

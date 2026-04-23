@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plants</title>
+    <title>Palindrome Checker</title>
         <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
-                        <nav>
+        <nav>
 <a href="index.html">Index</a>
 <a href="Final_CSC102.html">Board</a>
 <a href="plants.html">Plants</a>
 <a href="Strings.html">Strings</a>
 <a href="Palindrome.html">Palindromes</a>
         </nav>
+        <h1>Palindrome Checker</h1>
     </header>
-    
+    <main>
+        <form onsubmit="checkPalin(event)">
+            <label for="txtWord">Enter a word or phrase:</label>
+            <input type="text" id="txtWord">
+            <input type="submit" value="Check Word">
+        </form>
+        <div id="divMessage"></div>
+    </main>
+    <script src="script.js">
+
+    </script>
 </body>
 </html>

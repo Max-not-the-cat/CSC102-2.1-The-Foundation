@@ -63,3 +63,51 @@
                 // enable the start button == can click on start button
                  document.getElementById("btnStart").disabled = false;
             }
+
+        // this function will validate the user input based on the requirements of the client
+        function validate(){
+            // first name variable
+            let firstName = document.getElementById("txtFirstName").value;
+            let lastName = document.getElementById("txtLastName").value;
+            let zip = document.getElementById("txtZip").value;
+            let fullName = firstName + " " + lastName;
+            // create a variable to hold the message we will show the user
+            let message = "";
+            // we need to make sure the name does not exceed 20 characters
+            if (fullName.length > 20 || fullName.length == 1){
+                message = "Please enter a name that is less than 20 characters.";
+            }
+            else if(zip.length != 5){
+                message = "Please enter a 5 digit zip code.";
+            }
+            else{
+                message = "The secret word is validation!";
+            }
+            // display the message on the associated div
+            document.getElementById("divMessage").textContent = message;
+        }
+        function checkPalin(event){
+    event.preventDefault();
+    let wordToTest = document.getElementById("txtWord").value;
+    let bPalin = isPalin(wordToTest);
+    let divMessage = document.getElementById("divMessage");
+    if (bPalin == true){
+divMessage.textContent = "The phrase is a palindrome";
+    }
+    else{
+        divMessage.textContent = "The phrase is a not palindrome";
+    }
+}
+function isPalin(strToTest){
+    strToTest = strToTest.toLowerCase();
+    // replace all instances of spaces /\s with an empty string
+    strToTest = strToTest.replace(/\s/g, "");
+    let strReverse = strToTest;
+    strReverse = strReverse.split("").reverse().join("");
+    if (strReverse == strToTest){
+        return true;
+    }
+    else{
+        return false;
+    }
+}

@@ -38,3 +38,18 @@ footer{
     left: 550px;
     top: 300px;
 }
+
+/* Menu styles 
+nav a - these styles will only apply to anchor tags in the nav section
+*/
+nav a{
+text-decoration: none;
+color: white;
+font-size: x-large;
+padding: 2px 20px;
+border: 2px solid blue;
+border-radius: 10px;
+}
+nav a:hover{
+    background-color: slategray;
+}
