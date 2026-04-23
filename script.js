@@ -111,3 +111,27 @@ function isPalin(strToTest){
         return false;
     }
 }
+async function getData(){
+    // request the JSON file using the Fetch API
+    let responce = await fetch('planets.json');
+    // just a quick chest to make sure we actually got the data successfully
+    if (!responce.ok){
+        console.log("problem with json");
+    }
+    
+    // hopefully the connectioon to the file is ok
+    let data = await responce.json();
+    // now we can loop through the data
+    data.planets.forEach(
+        planet => {
+    // create a new div
+    let planetInfo = document.createElement('div');
+    // build the html to show off the planet data
+    planetInfo.innerHTML = `
+    <h2>${planet.name}</h2>
+    <p>Distance from sun: ${planet.distanceFromSunKm}</p>
+    <p>Moons: ${planet.moons}</p>
+    `;
+    
+    document.getElementById("divData").appendChild(planetInfo);
+    });}

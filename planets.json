@@ -1,0 +1,84 @@
+{
+  "planets": [
+    {
+      "id": 1,
+      "name": "Mercury",
+      "type": "Terrestrial",
+      "distanceFromSunKm": 57900000,
+      "diameterKm": 4879,
+      "moons": 0,
+      "avgTempC": 167,
+      "orbitalPeriodDays": 88
+    },
+    {
+      "id": 2,
+      "name": "Venus",
+      "type": "Terrestrial",
+      "distanceFromSunKm": 108200000,
+      "diameterKm": 12104,
+      "moons": 0,
+      "avgTempC": 464,
+      "orbitalPeriodDays": 225
+    },
+    {
+      "id": 3,
+      "name": "Earth",
+      "type": "Terrestrial",
+      "distanceFromSunKm": 149600000,
+      "diameterKm": 12742,
+      "moons": 1,
+      "avgTempC": 15,
+      "orbitalPeriodDays": 365
+    },
+    {
+      "id": 4,
+      "name": "Mars",
+      "type": "Terrestrial",
+      "distanceFromSunKm": 227900000,
+      "diameterKm": 6779,
+      "moons": 2,
+      "avgTempC": -65,
+      "orbitalPeriodDays": 687
+    },
+    {
+      "id": 5,
+      "name": "Jupiter",
+      "type": "Gas Giant",
+      "distanceFromSunKm": 778500000,
+      "diameterKm": 139820,
+      "moons": 95,
+      "avgTempC": -110,
+      "orbitalPeriodDays": 4333
+    },
+    {
+      "id": 6,
+      "name": "Saturn",
+      "type": "Gas Giant",
+      "distanceFromSunKm": 1432000000,
+      "diameterKm": 116460,
+      "moons": 146,
+      "avgTempC": -140,
+      "orbitalPeriodDays": 10759
+    },
+    {
+      "id": 7,
+      "name": "Uranus",
+      "type": "Ice Giant",
+      "distanceFromSunKm": 2867000000,
+      "diameterKm": 50724,
+      "moons": 28,
+      "avgTempC": -195,
+      "orbitalPeriodDays": 30687
+    },
+    {
+      "id": 8,
+      "name": "Neptune",
+      "type": "Ice Giant",
+      "distanceFromSunKm": 4515000000,
+      "diameterKm": 49244,
+      "moons": 16,
+      "avgTempC": -200,
+      "orbitalPeriodDays": 60190
+    }
+  ]
+}
