@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizza</title><link rel="stylesheet" href="main.css">
-
+    <title>Time Log</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
- <nav>
+        <nav>
 <a href="index.html">Index</a>
 <a href="Final_CSC102.html">Board</a>
 <a href="plants.html">Plants</a>
@@ -18,28 +18,18 @@
 <a href="json_example.html">JSON Example</a>
 <a href="time_log.html">Time Log</a>
         </nav>
-        <h1>Pizza Table</h1>
+        <h1>Please use this page to log the current time</h1>
     </header>
-    
-    <table id="tblPizza">
-        <caption>Pizza Menu</caption>
-        <tr>
-            <th>Pizza Name</th>
-            <th>Category</th>
-            <th>Ingredients</th>
-            <th>Price</th>
-            <th>Calories</th>
-        </tr>
-        <!-- data will be set up like so -->
-         <!-- 
-        <tr>
-            <td>Cheese</td>
-            <td>Vegetarian</td>
-            ...
-        </tr> -->
-    </table>
-    <script src="table.js"></script>
-        <footer>
+<!-- button to record current time and add it to an array -->
+    <button onclick="recordTime();">Record Time</button>
+    <!-- we will show the content of the array in this div -->
+    <div id="divTimes"></div>
+ <script src="script.js"></script>
+ <script>
+               // set up a global array
+        let arrTimes = [];
+ </script>
+    <footer>
         Max Montgomery<br>
         University of Advancing Technology<br>
         2625 W Baseline Rd, Tempe, Az 85283<br>
