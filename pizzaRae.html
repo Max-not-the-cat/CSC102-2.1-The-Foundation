@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- add a link to the css file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <!-- h1 is heading1 the page title -->
+        <h1>Rae's Pizza Place Menu</h1>
+    </header>
+
+    <table id="tblPizza">
+        <caption>Pizza Menu</caption>
+        <tr>
+            <th>Pizza Name</th>
+            <th>Category</th>
+            <th>Ingredients</th>
+            <th>Price</th>
+            <th>Calories</th>
+        </tr>
+        <!-- data will be set up like so:
+        <tr>
+            <td>Cheese</td>
+            <td>Vegetarian</td>
+            ...
+         </tr> -->
+    </table>
+
+    <!-- TODO: move to an external JavaScript file -->
+    <script>
+        // create a 2-dimensional array that is going to hold all of our info about the pizzas
+        // each row of info about a particular pizza will be an array 
+        // all of the rows will also live in an array
+
+        let arrPizzas = [
+            ["Cheese", "Vegetarian", "cheese", 10, 1000], // this was 1 row of information in our excel file - it is now an array with our 2d array
+            ["Pepperoni", "Meat", "cheese, pepperoni", 12, 1200],
+            ["Hawaiian", "Meat", "cheese, ham, pineapple", 15, 1500],
+            ["Veggies", "Vegetarian", "cheese, veggies", 12, 1000],
+            ["Deep Dish", "Meat", "cheese, extra dough, ham", 15, 2000]
+        ];
+
+        function buildRows(){
+            // set up constants to refer to the columns of our data
+            const NAME = 0;
+            const CATEGORY = 1;
+            const INGREDIENTS = 2;
+            const PRICE = 3;
+            const CALORIES = 4;
+
+            // loop through the array of pizzas and add them to the table
+            for (let i=0; i<arrPizzas.length; i++){
+                // create a new row that will be added to the table
+                let tr = document.createElement("tr");
+
+                // for each piece of information we want to display, we need to add that to a td which will be added to the row
+                let td = document.createElement("td");
+
+                // add the name to the row
+                td.textContent = arrPizzas[i][NAME];
+                tr.appendChild(td);
+
+                // add the category to the row
+                let tdCat = document.createElement("td");
+                tdCat.textContent = arrPizzas[i][CATEGORY];
+                tr.appendChild(tdCat);
+
+                // add the ingredients to the row
+                let tdIng = document.createElement("td");
+                tdIng.textContent = arrPizzas[i][INGREDIENTS];
+                tr.appendChild(tdIng);
+
+                // add the price to the row
+                let tdPrice = document.createElement("td");
+                tdPrice.textContent ="$" + arrPizzas[i][PRICE];
+                tr.appendChild(tdPrice);
+
+                 // add the calories to the row
+                 let tdCalories = document.createElement("td");
+                 tdCalories.textContent = arrPizzas[i][CALORIES];
+                tr.appendChild(tdCalories);
+
+                // need to add the row to the table
+                document.getElementById("tblPizza").appendChild(tr);
+            }
+        }
+
+        // call the function to add data to the table
+        buildRows();
+    </script>
+</body>
+</html>

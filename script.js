@@ -111,6 +111,99 @@ function isPalin(strToTest){
         return false;
     }
 }
+        // This function will add an audio element to the page
+        function addAudio(){
+            let divAudio = document.getElementById("divAudio");
+            // create an audio HTML element using javascript
+            let audioElement = document.createElement("audio");
+            // set the attributes of our new HTML element
+            // add an id so we can more easily work with this element
+            audioElement.setAttribute("id", "myAudio");
+            
+            // add the file name as the source
+            audioElement.setAttribute("src", "us-lab-background.mp3");
+            // add controls
+            audioElement.setAttribute("controls", "controls");
+            // set the volume to .5 by default
+            audioElement.volume = .5;
+            // add our new HTML audio element to the div that will host it
+            divAudio.appendChild(audioElement);
+            // dissallow the user from clicking th eadd audio button now that the audio has been added to the webpage
+            document.getElementById("btnAddAudio").hidden = true;
+            // make the play and pause buttons appear
+            document.getElementById("btPlayAudio").hidden = false;
+            document.getElementById("btnPauseAudio").hidden = false;
+        }
+        // create the function so that we can play the audio
+        function playAudio(){
+            // create a shortcut nickname to the audio element that we created in the addAudio funtion
+            let myAudio = document.getElementById("myAudio");
+            // let the sound play
+            myAudio.play();
+        }
+        // create the function so that we can stop playing the audio - pause
+        function pauseAudio(){
+            // create a shortcut nickname to the audio element that we created in the addAudio funtion
+            let myAudio = document.getElementById("myAudio");
+            // pause the sound
+            myAudio.pause();
+        }
+        // instead of setting up 7 seperate variables, we are setting up one array with 7 slots
+        //    watch out for the dreaded index out of bounds expection, most of the time when you see this error it is because you are trying to access the item whose number matches the number of items in the array, in this case 7. There is no 7th element in this array, the elements are in the 0-6 index
+        let arrPlants = ["Cactus", "Flower", "Aloe", "Rose", "Strawberry", "Tree", "Lotus", "Tomato", "Hibiscus", "Pineapple"];
+    // shortcut to the ul that will show our plants
+    let ulPlants = document.getElementById("ulPlants");
+        // this function will loop through the plants in the array and add them to the ul plants unordered list as list items
+            function showPlants(){
+                // clear out the ul plants list before adding any plants to it
+                ulPlants.innerHTML = "";
+                // forEach is just anouther way of looping through the array
+                arrPlants.forEach(function(plant, index){
+                    // create a list item to hold the current plant name as we loop through
+                let li = document.createElement("li");
+                // set the text of the list item to our plant name
+                li.textContent = plant;
+                // add an onclick event hander to allow the plant to be deleted
+                li.onclick = function(){
+                    // ask the user for confirmation in deleting the plant
+                    if(confirm("Remove " + plant + "?")){
+                        // remove the plant from the array
+                        arrPlants.splice(index, 1);
+                        // add a message that the plant was removed
+                        document.getElementById("divMessage").textContent = plant + " was removed!";
+                        // refresh the plant list
+                        showPlants();
+                    }
+                }
+                //  now add the plant to the list
+                    ulPlants.appendChild(li);
+                });
+            }
+            // the showPlants funtion will be called one time on page load
+            showPlants();
+        // loop through the array
+        /*for (let i=0; i < arrPlants.length; i++){
+            console.log("plant" + (i+1) + " = " + arrPlants[i]);
+        }*/
+    //    function to allow the user to add a plant to the array
+       function addPlant(){
+        // get the text that the user added into the addPLant text box
+        let newPlant = document.getElementById("txtNewPlant").value.trim();
+
+        // make sure that the input is not empty
+        if(newPlant == ""){
+            document.getElementById("divMessage").textContent = "Please enter a valid plant name";
+        return;
+        }
+        // add the plant to the array
+        arrPlants.push(newPlant);
+        // let the user know that the plant was added
+        document.getElementById("divMessage").textContent = newPlant + " was added!";
+        // erase the text from the text box
+        document.getElementById("txtNewPlant").value = "";
+        // we need to call showPlants again so that we see the new plants on the page
+        showPlants();
+       }
 async function getData(){
     // request the JSON file using the Fetch API
     let responce = await fetch('planets.json');

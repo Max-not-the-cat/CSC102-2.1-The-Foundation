@@ -8,12 +8,13 @@
 </head>
 <body>
     <header>
-        <nav>
+         <nav>
 <a href="index.html">Index</a>
 <a href="Final_CSC102.html">Board</a>
 <a href="plants.html">Plants</a>
 <a href="Strings.html">Strings</a>
 <a href="Palindrome.html">Palindromes</a>
+<a href="Pizza.html">Pizza Table</a>
 <a href="json_example.html">JSON Example</a>
         </nav>
         <h1>Palindrome Checker</h1>
@@ -25,14 +26,19 @@
             <input type="submit" value="Check Word">
         </form>
         <div id="divMessage"></div>
+        <!-- We will add an audio element to this div -->
+        <div id="divAudio"></div>
+        <!-- This button will add an audio element to the div above -->
+        <button id="btnAddAudio" onclick="addAudio();">Add Audio</button>
+        <button id="btPlayAudio" onclick="playAudio();" hidden>Play Audio</button>
+        <button id="btnPauseAudio" onclick="pauseAudio();" hidden>Pause Audio</button>
+        
     </main>
-    <footer>
+    <script src="script.js"></script>
+        <footer>
         Max Montgomery<br>
         University of Advancing Technology<br>
         2625 W Baseline Rd, Tempe, Az 85283<br>
     </footer>
-    <script src="script.js">
-
-    </script>
 </body>
 </html>

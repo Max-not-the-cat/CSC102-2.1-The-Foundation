@@ -8,18 +8,28 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Index</a>
-            <a href="Final_CSC102.html">Board</a>
-            <a href="plants.html">Plants</a>
-            <a href="Strings.html">Strings</a>
-            <a href="Palindrome.html">Palindromes</a>
-            <a href="json_example.html">JSON Example</a>
-                    </nav>
-    </header>
-    <main>
+        
+         <nav>
+<a href="index.html">Index</a>
+<a href="Final_CSC102.html">Board</a>
+<a href="plants.html">Plants</a>
+<a href="Strings.html">Strings</a>
+<a href="Palindrome.html">Palindromes</a>
+<a href="Pizza.html">Pizza Table</a>
+<a href="json_example.html">JSON Example</a>
+        </nav>
+        <h1>Housesitting Plant Manager</h1>
+        <div>
+            <div id="divMessage"></div>
+            <ul id="ulPlants"></ul>
+            <div>**To delete a plant, click it's name!**</div>
 
-    </main>
+            <h2>Add a Plant</h2>
+            <label for="txtNewPlant">Plant Name:</label><input type="text" id="txtNewPlant">
+            <button onclick="addPlant();">Add Plant</button>
+        </div>
+    </header>
+<script src="script.js"></script>
     <footer>
         Max Montgomery<br>
         University of Advancing Technology<br>
